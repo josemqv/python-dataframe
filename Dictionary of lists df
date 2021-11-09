@@ -1,4 +1,5 @@
 # Create a dictionary of lists with new data
+import pandas as pd
 avocados_dict = {
   "date": ["2019-11-17"	,"2019-12-01"	],
   "small_sold": [10859987,9291631],
