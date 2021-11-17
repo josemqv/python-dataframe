@@ -2,6 +2,17 @@ import pandas as pd
 # Initialize list to store tweet counts
 [clinton, trump, sanders, cruz] = [0, 0, 0, 0]
 
+import re
+
+def word_in_text(word, text):
+    word = word.lower()
+    text = text.lower()
+    match = re.search(word, text)
+
+    if match:
+        return True
+    return False
+
 # Iterate through df, counting the number of tweets in which
 # each candidate is mentioned
 for index, row in df.iterrows():
